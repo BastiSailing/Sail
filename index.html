@@ -28,13 +28,22 @@
             scroll-snap-align: start;
             flex-shrink: 0; /* Verhindert, dass die Abschnitte schrumpfen */
         }
+        /* Definiert den Hintergrund mit einem Bild */
+        .bg-image-section {
+            background-image: url('https://placehold.co/1920x1080/000/FFF?text=Ihr+Bild+Hier');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Optional: Erzeugt einen Parallax-Effekt beim Scrollen */
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sektion 1: Willkommen -->
-    <section class="section-container bg-[#121212]">
-        <div class="max-w-3xl mx-auto space-y-8">
+    <!-- Sektion 1: Willkommen - JETZT MIT HINTERGRUNDBILD -->
+    <section class="section-container bg-image-section relative">
+        <!-- Überlagerung für bessere Lesbarkeit des Textes -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 max-w-3xl mx-auto space-y-8">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
                 Willkommen.
             </h1>
@@ -87,7 +96,7 @@
                 Laden Sie Ihr eigenes Bild hoch und zeigen Sie es hier an.
             </p>
             <!-- So verweisen Sie auf Ihr eigenes Bild -->
-            <img src="images/snazzy-image.png" alt="tour" class="w-full h-auto rounded-xl shadow-xl">
+            <img src="images/segelboot.jpg" alt="Ein Segelboot auf dem Wasser" class="w-full h-auto rounded-xl shadow-xl">
         </div>
     </section>
 
