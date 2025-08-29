@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
+    <title>Scroll-Snapping Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,71 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-4;
+            color: #E0E0E0;
+            /* Aktiviert den Scroll-Snapping-Effekt für die gesamte Seite */
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh; /* Stellt sicher, dass der Body die volle Höhe des Viewports hat */
+        }
+        .section-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            /* Jede Sektion springt an den Anfang des Viewports */
+            scroll-snap-align: start;
+            flex-shrink: 0; /* Verhindert, dass die Abschnitte schrumpfen */
         }
     </style>
 </head>
 <body>
 
-    <main class="text-center max-w-4xl w-full">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-600 mb-8">Hallo!</h1>
-    </main>
+    <!-- Sektion 1: Willkommen -->
+    <section class="section-container bg-[#121212]">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+                Willkommen.
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400">
+                Sail with Max & Basti.
+            </p>
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                Los geht's
+            </a>
+        </div>
+    </section>
+
+    <!-- Sektion 2: Merkmale -->
+    <section class="section-container bg-[#1F2937]">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+                Tour1.
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400">
+                Griechenland.
+            </p>
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-purple-600 hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                Mehr erfahren
+            </a>
+        </div>
+    </section>
+
+    <!-- Sektion 3: Kontakt -->
+    <section class="section-container bg-[#2563EB]">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+                Tour2
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl font-normal text-white">
+                Amalfiküste
+            </p>
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-blue-600 font-bold bg-white hover:bg-gray-200 transition duration-300 transform hover:scale-105 shadow-lg">
+                Schreiben Sie uns
+            </a>
+        </div>
+    </section>
 
 </body>
 </html>
-
