@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            color: #E0E0E0;
+            color: #E0E1E4; /* Helles Beige aus der Palette für Haupttext */
             /* Aktiviert den Scroll-Snapping-Effekt für die gesamte Seite */
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
@@ -30,7 +30,7 @@
         }
         /* Definiert den Hintergrund mit einem Bild */
         .bg-image-section {
-            background-image: url('https://placehold.co/1920x1080/000/FFF?text=Ihr+Bild+Hier');
+            background-image: url('images/sailboat.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed; /* Optional: Erzeugt einen Parallax-Effekt beim Scrollen */
@@ -52,40 +52,49 @@
 </head>
 <body>
 
-    <!-- Sektion 1: Willkommen - JETZT MIT FADE-IN-EFFEKT -->
+    <!-- Sektion 1: Willkommen - JETZT MIT NEUER FARBE AUS DER PALETTE -->
     <section class="section-container bg-image-section relative">
         <!-- Überlagerung für bessere Lesbarkeit des Textes -->
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-[#4A5B73] opacity-60"></div>
         <div class="relative z-10 max-w-3xl mx-auto space-y-8">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Willkommen.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 fade-in" style="transition-delay: 0.2s;">
-                Dies ist eine minimalistische Webseite mit Scroll-Effekt.
+            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-200 fade-in" style="transition-delay: 0.2s;">
+                Join the Max & Basti.
             </p>
-            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-[#799AB3] hover:bg-[#AECAD9] transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
                 Los geht's
             </a>
         </div>
     </section>
 
-    <!-- Sektion 2: Merkmale - JETZT MIT FADE-IN-EFFEKT -->
-    <section class="section-container bg-[#1F2937]">
-        <div class="max-w-3xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
-                Einfach & Elegant.
-            </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 fade-in" style="transition-delay: 0.2s;">
-                Jeder Abschnitt füllt den Bildschirm für eine immersive Ansicht.
-            </p>
-            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-purple-600 hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
-                Mehr erfahren
-            </a>
+    <!-- Sektion 2: Merkmale - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
+    <section class="section-container bg-[#4A5B73]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center w-full max-w-6xl mx-auto p-4 sm:p-8">
+            <!-- Bild im linken Drittel -->
+            <div class="col-span-1 text-center md:text-left fade-in" style="transition-delay: 0.2s;">
+                <!-- Platzhalterbild, ersetzen Sie diesen Link durch Ihr eigenes Bild -->
+                <img src="images/snazzy-image.png.jpg" alt="Placeholder-Bild" class="rounded-xl w-full h-auto shadow-lg mb-4 md:mb-0">
+            </div>
+
+            <!-- Aufzählung im rechten Teil -->
+            <div class="col-span-1 md:col-span-2 text-left fade-in" style="transition-delay: 0.4s;">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter mb-6 fade-in" style="transition-delay: 0s;">
+                    Route.
+                </h1>
+                <ul class="list-disc space-y-4 text-lg pl-4 list-inside text-[#D9E1E4]">
+                    <li class="fade-in" style="transition-delay: 0.6s;">Gebiet: Griechenland.</li>
+                    <li class="fade-in" style="transition-delay: 0.8s;">5 Tage</li>
+                    <li class="fade-in" style="transition-delay: 1.0s;">individuelle An und Abreise.</li>
+                    <li class="fade-in" style="transition-delay: 1.2s;">Segelspaß.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Sektion 3: Kontakt - JETZT MIT FADE-IN-EFFEKT -->
-    <section class="section-container bg-[#2563EB]">
+    <!-- Sektion 3: Kontakt - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
+    <section class="section-container bg-[#799AB3]">
         <div class="max-w-3xl mx-auto space-y-8">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Kontaktieren Sie uns.
@@ -93,19 +102,19 @@
             <p class="text-base sm:text-lg md:text-xl font-normal text-white fade-in" style="transition-delay: 0.2s;">
                 Sagen Sie Hallo oder starten Sie ein Projekt.
             </p>
-            <a href="#" class="inline-block px-8 py-3 rounded-full text-blue-600 font-bold bg-white hover:bg-gray-200 transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-[#4A5B73] font-bold bg-[#E0E1E4] hover:bg-[#AECAD9] transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
                 Schreiben Sie uns
             </a>
         </div>
     </section>
     
-    <!-- Sektion 4: Bildergalerie - JETZT MIT FADE-IN-EFFEKT -->
-    <section class="section-container bg-[#121212]">
+    <!-- Sektion 4: Bildergalerie - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
+    <section class="section-container bg-[#547A73]">
         <div class="max-w-3xl mx-auto space-y-8">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Unsere Bilder.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 mb-8 fade-in" style="transition-delay: 0.2s;">
+            <p class="text-base sm:text-lg md:text-xl font-normal text-[#E0E1E4] mb-8 fade-in" style="transition-delay: 0.2s;">
                 Laden Sie Ihr eigenes Bild hoch und zeigen Sie es hier an.
             </p>
             <!-- So verweisen Sie auf Ihr eigenes Bild -->
@@ -113,31 +122,31 @@
         </div>
     </section>
 
-    <!-- Sektion 5: Elemente mit Fade-In-Effekt - BEREITS ANGEWENDET -->
-    <section class="section-container bg-[#334155]">
+    <!-- Sektion 5: Elemente mit Fade-In-Effekt - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
+    <section class="section-container bg-[#A3BFB9]">
         <div class="max-w-4xl mx-auto space-y-8">
             <h2 class="text-4xl sm:text-6xl font-bold mb-4 fade-in" style="transition-delay: 0s;">
                 Unsere Mission.
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-6 fade-in" style="transition-delay: 0.2s;">
+            <p class="text-lg sm:text-xl text-[#4A5B73] mb-6 fade-in" style="transition-delay: 0.2s;">
                 Wir schaffen minimalistische und funktionale Webseiten.
             </p>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-lg bg-[#4B5563] fade-in" style="transition-delay: 0.4s;">
-                    <h3 class="text-2xl font-semibold mb-2">Design.</h3>
-                    <p class="text-sm text-gray-400">
+                <div class="p-6 rounded-lg bg-[#64A9A3] fade-in" style="transition-delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-[#4A5B73]">Design.</h3>
+                    <p class="text-sm text-[#E0E1E4]">
                         Ästhetik, die begeistert.
                     </p>
                 </div>
-                <div class="p-6 rounded-lg bg-[#4B5563] fade-in" style="transition-delay: 0.6s;">
-                    <h3 class="text-2xl font-semibold mb-2">Funktion.</h3>
-                    <p class="text-sm text-gray-400">
+                <div class="p-6 rounded-lg bg-[#64A9A3] fade-in" style="transition-delay: 0.6s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-[#4A5B73]">Funktion.</h3>
+                    <p class="text-sm text-[#E0E1E4]">
                         Jede Webseite ist voll funktionsfähig.
                     </p>
                 </div>
-                <div class="p-6 rounded-lg bg-[#4B5563] fade-in" style="transition-delay: 0.8s;">
-                    <h3 class="text-2xl font-semibold mb-2">Nutzer.</h3>
-                    <p class="text-sm text-gray-400">
+                <div class="p-6 rounded-lg bg-[#64A9A3] fade-in" style="transition-delay: 0.8s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-[#4A5B73]">Nutzer.</h3>
+                    <p class="text-sm text-[#E0E1E4]">
                         Der Nutzer steht im Mittelpunkt.
                     </p>
                 </div>
