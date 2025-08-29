@@ -30,75 +30,140 @@
         }
         /* Definiert den Hintergrund mit einem Bild */
         .bg-image-section {
-            background-image: url('images/sailboat.jpg');
+            background-image: url('https://placehold.co/1920x1080/000/FFF?text=Ihr+Bild+Hier');
             background-size: cover;
             background-position: center;
             background-attachment: fixed; /* Optional: Erzeugt einen Parallax-Effekt beim Scrollen */
+        }
+
+        /* Stil für die anfänglich ausgeblendeten Elemente */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Stil für die eingeblendeten Elemente */
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-    <!-- Sektion 1: Willkommen - JETZT MIT HINTERGRUNDBILD -->
+    <!-- Sektion 1: Willkommen - JETZT MIT FADE-IN-EFFEKT -->
     <section class="section-container bg-image-section relative">
         <!-- Überlagerung für bessere Lesbarkeit des Textes -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 max-w-3xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Willkommen.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400">
+            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 fade-in" style="transition-delay: 0.2s;">
                 Dies ist eine minimalistische Webseite mit Scroll-Effekt.
             </p>
-            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
                 Los geht's
             </a>
         </div>
     </section>
 
-    <!-- Sektion 2: Merkmale -->
+    <!-- Sektion 2: Merkmale - JETZT MIT FADE-IN-EFFEKT -->
     <section class="section-container bg-[#1F2937]">
         <div class="max-w-3xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Einfach & Elegant.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400">
+            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 fade-in" style="transition-delay: 0.2s;">
                 Jeder Abschnitt füllt den Bildschirm für eine immersive Ansicht.
             </p>
-            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-purple-600 hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-lg">
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-white font-bold bg-purple-600 hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
                 Mehr erfahren
             </a>
         </div>
     </section>
 
-    <!-- Sektion 3: Kontakt -->
+    <!-- Sektion 3: Kontakt - JETZT MIT FADE-IN-EFFEKT -->
     <section class="section-container bg-[#2563EB]">
         <div class="max-w-3xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Kontaktieren Sie uns.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-white">
+            <p class="text-base sm:text-lg md:text-xl font-normal text-white fade-in" style="transition-delay: 0.2s;">
                 Sagen Sie Hallo oder starten Sie ein Projekt.
             </p>
-            <a href="#" class="inline-block px-8 py-3 rounded-full text-blue-600 font-bold bg-white hover:bg-gray-200 transition duration-300 transform hover:scale-105 shadow-lg">
+            <a href="#" class="inline-block px-8 py-3 rounded-full text-blue-600 font-bold bg-white hover:bg-gray-200 transition duration-300 transform hover:scale-105 shadow-lg fade-in" style="transition-delay: 0.4s;">
                 Schreiben Sie uns
             </a>
         </div>
     </section>
     
-    <!-- Sektion 4: Bildergalerie - NEU hinzugefügt -->
+    <!-- Sektion 4: Bildergalerie - JETZT MIT FADE-IN-EFFEKT -->
     <section class="section-container bg-[#121212]">
         <div class="max-w-3xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Unsere Bilder.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 mb-8">
+            <p class="text-base sm:text-lg md:text-xl font-normal text-gray-400 mb-8 fade-in" style="transition-delay: 0.2s;">
                 Laden Sie Ihr eigenes Bild hoch und zeigen Sie es hier an.
             </p>
             <!-- So verweisen Sie auf Ihr eigenes Bild -->
-            <img src="images/segelboot.jpg" alt="Ein Segelboot auf dem Wasser" class="w-full h-auto rounded-xl shadow-xl">
+            <img src="images/segelboot.jpg" alt="Ein Segelboot auf dem Wasser" class="w-full h-auto rounded-xl shadow-xl fade-in" style="transition-delay: 0.4s;">
         </div>
     </section>
 
+    <!-- Sektion 5: Elemente mit Fade-In-Effekt - BEREITS ANGEWENDET -->
+    <section class="section-container bg-[#334155]">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <h2 class="text-4xl sm:text-6xl font-bold mb-4 fade-in" style="transition-delay: 0s;">
+                Unsere Mission.
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-6 fade-in" style="transition-delay: 0.2s;">
+                Wir schaffen minimalistische und funktionale Webseiten.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-lg bg-[#4B5563] fade-in" style="transition-delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold mb-2">Design.</h3>
+                    <p class="text-sm text-gray-400">
+                        Ästhetik, die begeistert.
+                    </p>
+                </div>
+                <div class="p-6 rounded-lg bg-[#4B5563] fade-in" style="transition-delay: 0.6s;">
+                    <h3 class="text-2xl font-semibold mb-2">Funktion.</h3>
+                    <p class="text-sm text-gray-400">
+                        Jede Webseite ist voll funktionsfähig.
+                    </p>
+                </div>
+                <div class="p-6 rounded-lg bg-[#4B5563] fade-in" style="transition-delay: 0.8s;">
+                    <h3 class="text-2xl font-semibold mb-2">Nutzer.</h3>
+                    <p class="text-sm text-gray-400">
+                        Der Nutzer steht im Mittelpunkt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.fade-in').forEach(el => {
+                            el.classList.add('is-visible');
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.5 // Löst aus, wenn 50% der Sektion sichtbar sind
+            });
+
+            // Beobachtet ALLE Sektionen mit dem Fade-In-Effekt
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
