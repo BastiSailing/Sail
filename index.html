@@ -28,9 +28,25 @@
             position: relative;
         }
         
-        /* Definiert den Hintergrund mit einem Bild */
-        .bg-image-section {
-            background-image: url('images/sailboat.jpg');
+        /* Hintergrundbild für die erste Sektion */
+        .bg-image-section-1 {
+            background-image: url('https://source.unsplash.com/random/1600x900?sailboat,sunset');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Hintergrundbild für die dritte Sektion */
+        .bg-image-section-2 {
+            background-image: url('https://source.unsplash.com/random/1600x900?greek,island,sea');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Hintergrundbild für die fünfte Sektion */
+        .bg-image-section-3 {
+            background-image: url('https://source.unsplash.com/random/1600x900?clear,blue,ocean');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -52,7 +68,7 @@
 </head>
 <body>
 
-    <section class="section-container bg-image-section">
+    <section class="section-container bg-image-section-1">
         <div class="absolute inset-0 bg-[#4A5B73] opacity-30"></div>
         <div class="relative z-10 max-w-3xl mx-auto space-y-8">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
@@ -63,7 +79,7 @@
             </p>
         </div>
     </section>
-
+    
     <section class="section-container bg-[#4A5B73]">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center w-full max-w-6xl mx-auto p-4 sm:p-8">
             <div class="col-span-1 md:col-span-2 text-center md:text-left fade-in" style="transition-delay: 0.2s;">
@@ -84,7 +100,7 @@
         </div>
     </section>
 
-    <section class="section-container bg-image-section">
+    <section class="section-container bg-image-section-2">
         <div class="absolute inset-0 bg-[#799AB3] opacity-50"></div>
         <div class="max-w-3xl mx-auto space-y-8 relative z-10">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
@@ -110,7 +126,7 @@
         </div>
     </section>
 
-    <section class="section-container bg-image-section">
+    <section class="section-container bg-image-section-3">
         <div class="absolute inset-0 bg-[#547A73] opacity-50"></div>
         <div class="max-w-3xl mx-auto space-y-8 relative z-10">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
