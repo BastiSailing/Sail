@@ -11,11 +11,10 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            color: #E0E1E4; /* Helles Beige aus der Palette für Haupttext */
-            /* Aktiviert den Scroll-Snapping-Effekt für die gesamte Seite */
+            color: #E0E1E4;
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
-            height: 100vh; /* Stellt sicher, dass der Body die volle Höhe des Viewports hat */
+            height: 100vh;
         }
         .section-container {
             height: 100vh;
@@ -24,16 +23,33 @@
             justify-content: center;
             text-align: center;
             padding: 1rem;
-            /* Jede Sektion springt an den Anfang des Viewports */
             scroll-snap-align: start;
-            flex-shrink: 0; /* Verhindert, dass die Abschnitte schrumpfen */
+            flex-shrink: 0;
+            position: relative; /* Wichtig für die Positionierung des Overlays */
         }
-        /* Definiert den Hintergrund mit einem Bild */
-        .bg-image-section {
+
+        /* Hintergrundbild für die erste Sektion */
+        .bg-image-section-1 {
             background-image: url('images/sailboat.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Optional: Erzeugt einen Parallax-Effekt beim Scrollen */
+            background-attachment: fixed;
+        }
+
+        /* Hintergrundbild für die zweite Sektion mit Bild */
+        .bg-image-section-2 {
+            background-image: url('images/boat_in_greece.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Hintergrundbild für die dritte Sektion mit Bild */
+        .bg-image-section-3 {
+            background-image: url('images/blue_sea.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         /* Stil für die anfänglich ausgeblendeten Elemente */
@@ -52,9 +68,7 @@
 </head>
 <body>
 
-    <!-- Sektion 1: Willkommen - JETZT MIT NEUER FARBE AUS DER PALETTE -->
-    <section class="section-container bg-image-section relative">
-        <!-- Überlagerung für bessere Lesbarkeit des Textes -->
+    <section class="section-container bg-image-section-1">
         <div class="absolute inset-0 bg-[#4A5B73] opacity-30"></div>
         <div class="relative z-10 max-w-3xl mx-auto space-y-8">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
@@ -66,9 +80,9 @@
         </div>
     </section>
 
-    <!-- Sektion 2: Merkmale - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
-    <section class="section-container bg-[#4A5B73]">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center w-full max-w-6xl mx-auto p-4 sm:p-8">
+    <section class="section-container bg-image-section-2">
+        <div class="absolute inset-0 bg-[#4A5B73] opacity-60"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center w-full max-w-6xl mx-auto p-4 sm:p-8 relative z-10">
             <div class="col-span-1 md:col-span-2 text-center md:text-left fade-in" style="transition-delay: 0.2s;">
                 <img src="images/route.png" alt="Placeholder-Bild" class="rounded-xl w-full h-auto shadow-lg mb-4 md:mb-0">
             </div>
@@ -87,9 +101,9 @@
         </div>
     </section>
 
-    <!-- Sektion 3: Kontakt - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
-    <section class="section-container bg-[#799AB3]">
-        <div class="max-w-3xl mx-auto space-y-8">
+    <section class="section-container bg-image-section-3">
+        <div class="absolute inset-0 bg-[#799AB3] opacity-50"></div>
+        <div class="max-w-3xl mx-auto space-y-8 relative z-10">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Kontaktieren Sie uns.
             </h1>
@@ -102,7 +116,6 @@
         </div>
     </section>
     
-    <!-- Sektion 4: Segelroute - MIT EINGEBETTETER KARTE -->
     <section class="section-container bg-[#AECAD9]">
         <div class="max-w-4xl mx-auto w-full p-4 space-y-8">
             <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-[#4A5B73] fade-in" style="transition-delay: 0s;">
@@ -114,7 +127,6 @@
         </div>
     </section>
 
-    <!-- Sektion 4: Segelroute - MIT EINGEBETTETER KARTE -->
     <section class="section-container bg-[#AECAD9]">
         <div class="max-w-4xl mx-auto w-full p-4 space-y-8">
             <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-[#4A5B73] fade-in" style="transition-delay: 0s;">
@@ -126,21 +138,19 @@
         </div>
     </section>
 
-    <!-- Sektion 5: Bildergalerie - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
-    <section class="section-container bg-[#547A73]">
-        <div class="max-w-3xl mx-auto space-y-8">
+    <section class="section-container bg-image-section-2">
+        <div class="absolute inset-0 bg-[#547A73] opacity-50"></div>
+        <div class="max-w-3xl mx-auto space-y-8 relative z-10">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tighter fade-in" style="transition-delay: 0s;">
                 Unsere Bilder.
             </h1>
             <p class="text-base sm:text-lg md:text-xl font-normal text-[#E0E1E4] mb-8 fade-in" style="transition-delay: 0.2s;">
                 Laden Sie Ihr eigenes Bild hoch und zeigen Sie es hier an.
             </p>
-            <!-- So verweisen Sie auf Ihr eigenes Bild -->
             <img src="images/segelboot.jpg" alt="Ein Segelboot auf dem Wasser" class="w-full h-auto rounded-xl shadow-xl fade-in" style="transition-delay: 0.4s;">
         </div>
     </section>
 
-    <!-- Sektion 6: Elemente mit Fade-In-Effekt - JETZT MIT NEUEN FARBEN AUS DER PALETTE -->
     <section class="section-container bg-[#A3BFB9]">
         <div class="max-w-4xl mx-auto space-y-8">
             <h2 class="text-4xl sm:text-6xl font-bold mb-4 fade-in" style="transition-delay: 0s;">
@@ -183,10 +193,9 @@
                     }
                 });
             }, {
-                threshold: 0.5 // Löst aus, wenn 50% der Sektion sichtbar sind
+                threshold: 0.5
             });
 
-            // Beobachtet ALLE Sektionen mit dem Fade-In-Effekt
             document.querySelectorAll('section').forEach(section => {
                 observer.observe(section);
             });
